@@ -35,7 +35,7 @@
 
 # 📖 Space Travelers Hub <a name="about-project"></a>
 
-**Space Travelers Hub ** is an application that shares all the news about space travel.
+**Space Travelers Hub ** is an application that shares all the news about space travel, allows users to book rockets and join selected space missions.
 
 ## 🛠 Built With <a name="built-with"></a>
 
