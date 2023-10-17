@@ -25,6 +25,9 @@ const Rockets = () => {
             <div className="rocket-info">
               <h2>{rocket.name}</h2>
               <p>{rocket.description}</p>
+              <button type="submit" className="reserve-btn">
+                Reserve rocket
+              </button>
             </div>
           </li>
         ))}
