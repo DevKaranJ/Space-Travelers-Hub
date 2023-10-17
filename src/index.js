@@ -1,9 +1,9 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom/client';
-import store from './redux/store';
-
-import './index.css';
+import { configureStore } from '@reduxjs/toolkit';
+import thunk from 'redux-thunk';
+import rootReducer from './reducers';
 import App from './App';
 import './index.css';
 
