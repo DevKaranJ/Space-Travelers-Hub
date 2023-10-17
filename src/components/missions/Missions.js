@@ -1,11 +1,19 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchMissions } from '../../actions/missions/missions';
+import { fetchMissions, joinMission, leaveMission } from '../../actions/missions/missions';
 
 function Missions() {
   const dispatch = useDispatch();
   const missions = useSelector((state) => state.missions.missions);
   const error = useSelector((state) => state.missions.error);
+
+  const handleJoinMission = (missionId) => {
+    dispatch(joinMission(missionId));
+  };
+
+  const handleLeaveMission = (missionId) => {
+    dispatch(leaveMission(missionId));
+  };
 
   useEffect(() => {
     dispatch(fetchMissions());
@@ -28,6 +36,11 @@ function Missions() {
           <li key={mission.mission_id}>
             <h3>{mission.mission_name}</h3>
             <p>{mission.description}</p>
+            {mission.reserved ? (
+              <button type="button" onClick={() => handleLeaveMission(mission.mission_id)}>Leave Mission</button>
+            ) : (
+              <button type="button" onClick={() => handleJoinMission(mission.mission_id)}>Join Mission</button>
+            )}
           </li>
         ))}
       </ul>
