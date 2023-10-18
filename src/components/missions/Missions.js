@@ -37,9 +37,15 @@ function Missions() {
             <h3>{mission.mission_name}</h3>
             <p>{mission.description}</p>
             {mission.reserved ? (
-              <button type="button" onClick={() => handleLeaveMission(mission.mission_id)}>Leave Mission</button>
+              <div>
+                <span>Active Member</span>
+                <button type="button" onClick={() => handleLeaveMission(mission.mission_id)}>Leave Mission</button>
+              </div>
             ) : (
-              <button type="button" onClick={() => handleJoinMission(mission.mission_id)}>Join Mission</button>
+              <div>
+                <span>NOT A MEMBER</span>
+                <button type="button" onClick={() => handleJoinMission(mission.mission_id)}>Join Mission</button>
+              </div>
             )}
           </li>
         ))}
