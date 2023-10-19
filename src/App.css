@@ -63,5 +63,13 @@
 }
 
 .cancel-reserve-btn {
-  color: #3498db;
+  color: lightgray;
+  background-color: #fff;
+  border: 1px solid lightgray;
+  width: 12rem;
+}
+
+.cancel-reserve-btn:hover {
+  background-color: #3498db;
+  color: #fff;
 }
