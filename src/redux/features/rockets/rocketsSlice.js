@@ -72,4 +72,28 @@ export const reserveRocket = createAsyncThunk(
   },
 );
 
+export const cancelRocketReservation = createAsyncThunk(
+  'rockets/cancelRocketReservation',
+  async (rocketId, { getState, dispatch }) => {
+    const state = getState();
+    const { rockets } = state;
+
+    // Find the selected rocket by its id
+    const selectedRocket = rockets.rockets.find(
+      (rocket) => rocket.id === rocketId,
+    );
+
+    if (selectedRocket) {
+      // eslint-disable-next-line max-len
+      const updatedRockets = rockets.rockets.map((rocket) => (rocket.id === rocketId ? { ...rocket, reserved: false } : rocket));
+
+      dispatch(rocketsSlice.actions.setRockets(updatedRockets));
+
+      return updatedRockets;
+    }
+
+    return rocketId;
+  },
+);
+
 export default rocketsSlice.reducer;
