@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   fetchRockets,
   reserveRocket,
+  cancelRocketReservation,
 } from '../../redux/features/rockets/rocketsSlice';
 
 const Rockets = () => {
@@ -15,8 +16,10 @@ const Rockets = () => {
 
   const handleReserveClick = (rocket) => {
     dispatch(reserveRocket(rocket.id));
-    const cancelReservationBtn = document.querySelector('.reserve-btn');
-    cancelReservationBtn.innerHTML = 'Cancel Reservation';
+  };
+
+  const handleCancelReserveClick = (rocket) => {
+    dispatch(cancelRocketReservation(rocket.id));
   };
 
   return (
@@ -39,13 +42,24 @@ const Rockets = () => {
                 )}
                 {rocket.description}
               </p>
-              <button
-                type="button"
-                className="reserve-btn"
-                onClick={() => handleReserveClick(rocket)}
-              >
-                Reserve rocket
-              </button>
+              {rocket.reserved && (
+                <button
+                  type="button"
+                  className="reserve-btn cancel-reserve-btn"
+                  onClick={() => handleCancelReserveClick(rocket)}
+                >
+                  Cancel Reservation
+                </button>
+              )}
+              {!rocket.reserved && (
+                <button
+                  type="button"
+                  className="reserve-btn"
+                  onClick={() => handleReserveClick(rocket)}
+                >
+                  Reserve rocket
+                </button>
+              )}
             </div>
           </li>
         ))}
