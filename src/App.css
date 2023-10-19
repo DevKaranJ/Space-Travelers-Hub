@@ -49,3 +49,19 @@
 .reserve-btn:hover {
   cursor: pointer;
 }
+
+.reserve-rocket-tag {
+  display: inline-flex;
+  width: 5rem;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #3498db;
+  padding: 0 2px 0 2px;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+}
+
+.cancel-reserve-btn {
+  color: #3498db;
+}
