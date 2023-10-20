@@ -1,6 +1,6 @@
 * {
   list-style: none;
-  margin: 0;
+  margin: 2px;
   padding: 0;
   box-sizing: border-box;
 }
@@ -72,4 +72,21 @@
 .cancel-reserve-btn:hover {
   background-color: #3498db;
   color: #fff;
+}
+
+.my-rockets {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+}
+
+.my-rockets > ul {
+  padding-top: 1rem;
+}
+
+.my-rockets > ul li {
+  height: 4rem;
+  border: 1px solid lightgray;
+  padding: 0.5rem 0 0 2rem;
 }

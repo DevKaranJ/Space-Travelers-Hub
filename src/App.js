@@ -13,6 +13,7 @@ function App() {
         <Navigation />
         <div className="header-line" />
         <Switch>
+          <Route exact path="/" component={Rockets} />
           <Route path="/rockets" component={Rockets} />
           <Route path="/missions" component={Missions} />
           <Route path="/my-profile" component={MyProfile} />
