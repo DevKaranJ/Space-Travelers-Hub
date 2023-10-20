@@ -29,3 +29,15 @@
 .mission-table button:hover {
   background-color: #0056b3;
 }
+
+.active-status {
+  background-color: rgb(6, 143, 143);
+  color: #fff;
+  font-weight: 400;
+}
+
+.inactive-status {
+  background-color: grey;
+  color: #fff;
+  font-weight: 400;
+}
