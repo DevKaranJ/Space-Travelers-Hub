@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMissions, joinMission, leaveMission } from '../../actions/missions/missions';
+import './Mission.css';
 
 function Missions() {
   const dispatch = useDispatch();
@@ -23,33 +24,50 @@ function Missions() {
     return (
       <div>
         Error:
+        {' '}
         {error}
       </div>
     );
   }
 
   return (
-    <div>
-      <h2>Missions</h2>
-      <ul>
-        {missions.map((mission) => (
-          <li key={mission.mission_id}>
-            <h3>{mission.mission_name}</h3>
-            <p>{mission.description}</p>
-            {mission.reserved ? (
-              <div>
-                <span>Active Member</span>
-                <button type="button" onClick={() => handleLeaveMission(mission.mission_id)}>Leave Mission</button>
-              </div>
-            ) : (
-              <div>
-                <span>NOT A MEMBER</span>
-                <button type="button" onClick={() => handleJoinMission(mission.mission_id)}>Join Mission</button>
-              </div>
-            )}
-          </li>
-        ))}
-      </ul>
+    <div className="mission">
+      <table className="mission-table">
+        <thead>
+          <tr>
+            <th>Mission</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {missions.map((mission) => (
+            <tr key={mission.mission_id}>
+              <td>{mission.mission_name}</td>
+              <td>{mission.description}</td>
+              <td>
+                {mission.reserved ? (
+                  <div>Active Member</div>
+                ) : (
+                  <div>NOT A MEMBER</div>
+                )}
+              </td>
+              <td>
+                {mission.reserved ? (
+                  <button type="button" onClick={() => handleLeaveMission(mission.mission_id)}>
+                    Leave Mission
+                  </button>
+                ) : (
+                  <button type="button" onClick={() => handleJoinMission(mission.mission_id)}>
+                    Join Mission
+                  </button>
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
