@@ -1,30 +1,30 @@
 .my-profile {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .rocket-profileTable,
 .mission-profileTable {
-    width: 49%; /* Set the width to approximately 49% to allow for a small gap between tables */
-    border-collapse: collapse;
-    margin-top: 10px;
+  width: 49%; /* Set the width to approximately 49% to allow for a small gap between tables */
+  border-collapse: collapse;
+  margin-top: 10px;
 }
 
 .profile-table {
-    width: 100%;
+  width: 100%;
 }
 
 .profile-table th,
 .profile-table td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: left;
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
 }
 
 .profile-table th {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 p {
-    font-style: italic;
+  font-style: italic;
 }
