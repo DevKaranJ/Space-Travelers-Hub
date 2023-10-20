@@ -50,14 +50,43 @@
   cursor: pointer;
 }
 
-.active-status {
-  background-color: rgb(6, 143, 143);
-  color: #fff;
-  font-weight: 400;
+.reserve-rocket-tag {
+  display: inline-flex;
+  width: 5rem;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #3498db;
+  padding: 0 2px 0 2px;
+  border-radius: 5px;
+  margin-right: 0.5rem;
 }
 
-.inactive-status {
-  background-color: grey;
+.cancel-reserve-btn {
+  color: lightgray;
+  background-color: #fff;
+  border: 1px solid lightgray;
+  width: 12rem;
+}
+
+.cancel-reserve-btn:hover {
+  background-color: #3498db;
   color: #fff;
-  font-weight: 400;
+}
+
+.my-rockets {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+}
+
+.my-rockets > ul {
+  padding-top: 1rem;
+}
+
+.my-rockets > ul li {
+  height: 4rem;
+  border: 1px solid lightgray;
+  padding: 0.5rem 0 0 2rem;
 }
