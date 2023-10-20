@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Redux Actions should create a snapshot for fetchMissions action 1`] = `
+Array [
+  Object {
+    "payload": Array [
+      Object {
+        "mission": "Mission 1",
+      },
+      Object {
+        "mission": "Mission 2",
+      },
+    ],
+    "type": "FETCH_MISSIONS_SUCCESS",
+  },
+]
+`;
+
+exports[`Redux Actions should create a snapshot for joinMission action 1`] = `
+Array [
+  Object {
+    "payload": 1,
+    "type": "JOIN_MISSION",
+  },
+]
+`;
+
+exports[`Redux Actions should create a snapshot for leaveMission action 1`] = `
+Array [
+  Object {
+    "payload": 1,
+    "type": "LEAVE_MISSION",
+  },
+]
+`;
