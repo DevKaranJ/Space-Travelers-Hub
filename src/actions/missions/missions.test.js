@@ -1,9 +1,9 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import axios from 'axios';
-import { fetchMissions, joinMission, leaveMission } from './missions'; // Replace with the actual path to your actions
+import { fetchMissions, joinMission, leaveMission } from './missions';
 
-jest.mock('axios'); // Mock the axios module
+jest.mock('axios');
 
 const mockStore = configureMockStore([thunk]);
 
