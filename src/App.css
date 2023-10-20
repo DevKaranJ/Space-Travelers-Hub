@@ -49,3 +49,15 @@
 .reserve-btn:hover {
   cursor: pointer;
 }
+
+.active-status {
+  background-color: rgb(6, 143, 143);
+  color: #fff;
+  font-weight: 400;
+}
+
+.inactive-status {
+  background-color: grey;
+  color: #fff;
+  font-weight: 400;
+}

@@ -47,12 +47,11 @@ function Missions() {
               <td>{mission.mission_name}</td>
               <td>{mission.description}</td>
               <td>
-                {mission.reserved ? (
-                  <div>Active Member</div>
-                ) : (
-                  <div>NOT A MEMBER</div>
-                )}
+                <div className={mission.reserved ? 'active-status' : 'inactive-status'}>
+                  {mission.reserved ? 'Active Member' : 'NOT A MEMBER'}
+                </div>
               </td>
+
               <td>
                 {mission.reserved ? (
                   <button type="button" onClick={() => handleLeaveMission(mission.mission_id)}>
