@@ -17,8 +17,8 @@ function Missions() {
   };
 
   useEffect(() => {
-    dispatch(fetchMissions());
-  }, [dispatch]);
+    if (!missions.length) dispatch(fetchMissions());
+  }, [dispatch, missions]);
 
   if (error) {
     return (
