@@ -11,8 +11,10 @@ const Rockets = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchRockets());
-  }, [dispatch]);
+    if (!rocketsState.length) {
+      dispatch(fetchRockets());
+    }
+  }, [dispatch, rocketsState]);
 
   const handleReserveClick = (rocket) => {
     dispatch(reserveRocket(rocket.id));
