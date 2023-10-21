@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Missions Component renders Missions component with sample data 1`] = `
+<div>
+  <div
+    class="mission"
+  >
+    <table
+      class="mission-table"
+    >
+      <thead>
+        <tr>
+          <th>
+            Mission
+          </th>
+          <th>
+            Description
+          </th>
+          <th>
+            Status
+          </th>
+          <th>
+            Action
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Mission 1
+          </td>
+          <td>
+            Mission description 1
+          </td>
+          <td>
+            <div
+              class="active-status"
+            >
+              Active Member
+            </div>
+          </td>
+          <td>
+            <button
+              type="button"
+            >
+              Leave Mission
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Mission 2
+          </td>
+          <td>
+            Mission description 2
+          </td>
+          <td>
+            <div
+              class="inactive-status"
+            >
+              NOT A MEMBER
+            </div>
+          </td>
+          <td>
+            <button
+              type="button"
+            >
+              Join Mission
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
